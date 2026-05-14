@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section
       id="ambitions"
-      className="relative z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden px-6 pt-[60px] md:pt-0"
+      className="relative z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden px-6 pt-[35px] md:pt-0"
     >
       <div
         className="pointer-events-none absolute inset-0"
