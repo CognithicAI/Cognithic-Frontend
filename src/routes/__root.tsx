@@ -4,6 +4,8 @@ import {
   createRootRoute,
   useRouter,
 } from "@tanstack/react-router";
+import { ReactLenis } from "lenis/react";
+import { useEffect } from "react";
 
 function NotFoundComponent() {
   return (
@@ -84,8 +86,8 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <>
+    <ReactLenis root>
       <Outlet />
-    </>
+    </ReactLenis>
   );
 }

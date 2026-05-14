@@ -15,11 +15,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 z-50 h-16 w-full transition-all duration-300 border-b ${
-        isScrolled || isMenuOpen
-          ? "border-b-[rgba(77,67,84,0.3)] bg-[rgba(19,19,19,0.6)] shadow-[0_0_20px_rgba(183,109,255,0.1)] backdrop-blur-[16px]"
+      className={`fixed top-0 z-50 h-16 w-full transition-all duration-300 border-b ${isScrolled || isMenuOpen
+          ? "border-b-[rgba(77,67,84,0.3)] bg-[rgba(19,19,19,0.9)] shadow-[0_0_20px_rgba(183,109,255,0.1)] backdrop-blur-[16px]"
           : "border-b-white/5 bg-transparent"
-      }`}
+        }`}
     >
       <div className="mx-auto flex h-full w-full max-w-[1280px] items-center justify-between px-4">
         <a href="/" className="flex h-8 items-center gap-2 text-[#ddb7ff] transition-opacity hover:opacity-90">
