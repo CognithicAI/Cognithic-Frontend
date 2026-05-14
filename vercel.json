@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/(.*\\.(js|css|png|jpg|jpeg|svg|ico|json|map))", "destination": "/$1" },
+    { "source": "/(.*)", "destination": "/api/ssr" }
+  ]
+}
