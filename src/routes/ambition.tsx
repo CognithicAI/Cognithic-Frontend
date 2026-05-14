@@ -39,14 +39,12 @@ function Ambition() {
             <span>A Reality Check</span>
           </div>
 
-          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-10 max-w-5xl mx-auto leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            Did you <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">actually</span> prepare for your interview
-          </h1>
-          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-10 max-w-5xl mx-auto leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000"> and gain confidence?
-
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 md:mb-10 max-w-5xl mx-auto leading-[1.2] md:leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            Did you <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">actually</span> prepare for your interview <br className="hidden md:block" />
+            and gain confidence?
           </h1>
 
-          <p className="text-lg md:text-xl font-light text-muted-foreground mb-08 italic animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
+          <p className="text-base sm:text-lg md:text-xl font-light text-muted-foreground mb-8 md:mb-12 italic animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200 px-4">
             ...or did you just <span className="text-secondary font-medium drop-shadow-[0_0_8px_rgba(56,189,248,0.3)]">think</span> you were?
           </p>
 
