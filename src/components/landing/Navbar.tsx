@@ -19,7 +19,7 @@ export function Navbar() {
         : "border-b-white/5 bg-transparent"
         }`}
     >
-      <div className="mx-auto flex h-full w-full max-w-[1280px] items-center justify-between px-8">
+      <div className="mx-auto flex h-full w-full max-w-[1280px] items-center justify-between px-2">
         <a href="/" className="flex h-8 items-center gap-2 text-[#ddb7ff] transition-opacity hover:opacity-90">
           <span className="flex h-4 w-5 items-center justify-center text-[#ddb7ff]">
             <SquareTerminal className="h-4 w-5" strokeWidth={2.25} />

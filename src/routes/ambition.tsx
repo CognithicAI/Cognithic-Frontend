@@ -34,16 +34,19 @@ function Ambition() {
         </div>
 
         <div className="container relative z-10 px-4 mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-sm font-semibold border rounded-full border-primary/30 bg-primary/10 text-primary animate-in fade-in slide-in-from-bottom-4 duration-700 shadow-[0_0_15px_rgba(183,109,255,0.2)]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-semibold border rounded-full border-primary/30 bg-primary/10 text-primary animate-in fade-in slide-in-from-bottom-4 duration-700 shadow-[0_0_15px_rgba(183,109,255,0.2)]">
             <HelpCircle className="w-4 h-4" />
             <span>A Reality Check</span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 max-w-5xl mx-auto leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            Did you <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">actually</span> prepare for your interview and gain confidence?
+          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-10 max-w-5xl mx-auto leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            Did you <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">actually</span> prepare for your interview
+          </h1>
+          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-10 max-w-5xl mx-auto leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000"> and gain confidence?
+
           </h1>
 
-          <p className="text-xl md:text-3xl font-light text-muted-foreground mb-8 italic animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
+          <p className="text-lg md:text-xl font-light text-muted-foreground mb-08 italic animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
             ...or did you just <span className="text-secondary font-medium drop-shadow-[0_0_8px_rgba(56,189,248,0.3)]">think</span> you were?
           </p>
 
@@ -61,39 +64,7 @@ function Ambition() {
         </div>
       </section>
 
-
-
-      {/* Final CTA */}
-      <section className="pt-16 pb-32 relative overflow-hidden">
-        {/* Subtle background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
-          <div className="absolute inset-0 bg-primary/5 blur-[120px] rounded-full" />
-        </div>
-
-        <div className="container px-4 mx-auto text-center relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <Sparkles className="w-12 h-12 text-primary mx-auto mb-8 animate-pulse" />
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-[1.1] tracking-tight">
-              Stop Thinking. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">
-                Start Being Ready.
-              </span>
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-              Your ambition deserves real results. <span className="text-foreground font-medium">Cognithic AI</span> is the bridge between where you are and where you want to be.
-            </p>
-            <Link
-              to="/"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 text-lg font-bold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(183,109,255,0.4)] group"
-            >
-              On the Way!
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

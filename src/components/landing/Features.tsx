@@ -13,8 +13,8 @@ function SpecTag({ label, className = "" }: { label: string; className?: string 
 
 export function Features() {
   return (
-    <section id="interviews" className="px-4 pb-20 pt-4 md:px-6 md:pb-24">
-      <div className="mx-auto grid max-w-[1280px] gap-3 md:grid-cols-12 md:gap-4">
+    <section id="interviews" className="pb-20 pt-4 md:pb-24">
+      <div className="mx-auto grid max-w-[1280px] gap-3 px-2 md:grid-cols-12 md:gap-4">
         <div className="box-border flex min-h-[320px] flex-col justify-between rounded-[8px] border border-[#262626] bg-[rgba(23,23,23,0.8)] p-8 backdrop-blur-[10px] md:col-span-7">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
