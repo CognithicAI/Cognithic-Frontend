@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import {
   Sparkles,
@@ -23,7 +22,6 @@ export const Route = createFileRoute("/ambition")({
 function Ambition() {
   return (
     <main className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary">
-      <Navbar />
 
       {/* Hero / Reality Check Section */}
       <section className="relative min-h-screen flex flex-col justify-center py-8 md:py-12 overflow-hidden">
@@ -41,16 +39,19 @@ function Ambition() {
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 md:mb-10 max-w-5xl mx-auto leading-[1.2] md:leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000">
             Did you <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">actually</span> prepare for your interview <br className="hidden md:block" />
+          </h1>
+
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 md:mb-10 max-w-5xl mx-auto leading-[1.2] md:leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000">
             and gain confidence?
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl font-light text-muted-foreground mb-8 md:mb-12 italic animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200 px-4">
+          <p className="text-base sm:text-lg md:text-xl font-light text-muted-foreground mb-6 md:mb-12 italic animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200 px-4">
             ...or did you just <span className="text-secondary font-medium drop-shadow-[0_0_8px_rgba(56,189,248,0.3)]">think</span> you were?
           </p>
 
 
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-500">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-500">
             <Link
               to="/"
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 md:px-10 md:py-4 text-[13px] md:text-lg font-bold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(183,109,255,0.4)] group whitespace-nowrap"

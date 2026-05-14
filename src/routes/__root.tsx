@@ -6,6 +6,7 @@ import {
 } from "@tanstack/react-router";
 import { ReactLenis } from "lenis/react";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 function NotFoundComponent() {
   return (
@@ -84,10 +85,19 @@ export const Route = createRootRoute({
   errorComponent: ErrorComponent,
 });
 
+import { Navbar } from "@/components/landing/Navbar";
+
 function RootComponent() {
   return (
     <ReactLenis root>
-      <Outlet />
+      <Navbar />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Outlet />
+      </motion.div>
     </ReactLenis>
   );
 }

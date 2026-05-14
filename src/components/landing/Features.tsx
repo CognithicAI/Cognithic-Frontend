@@ -1,4 +1,5 @@
 import { Compass, FileText, Link, Mail, UsersRound } from "lucide-react";
+import { motion } from "framer-motion";
 
 
 function SpecTag({ label, className = "" }: { label: string; className?: string }) {
