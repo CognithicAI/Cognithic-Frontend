@@ -17,7 +17,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 z-50 h-16 w-full transition-all duration-300 border-b ${
         isScrolled || isMenuOpen
-          ? "border-b-[rgba(77,67,84,0.3)] bg-[rgba(19,19,19,0.9)] shadow-[0_0_20px_rgba(183,109,255,0.1)] backdrop-blur-[16px]"
+          ? "border-b-[rgba(77,67,84,0.3)] bg-[rgba(19,19,19,0.6)] shadow-[0_0_20px_rgba(183,109,255,0.1)] backdrop-blur-[16px]"
           : "border-b-white/5 bg-transparent"
       }`}
     >

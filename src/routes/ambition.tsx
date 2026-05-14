@@ -53,10 +53,10 @@ function Ambition() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-500">
             <Link
               to="/"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 text-lg font-bold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(183,109,255,0.4)] group"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 md:px-10 md:py-4 text-[13px] md:text-lg font-bold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(183,109,255,0.4)] group whitespace-nowrap"
             >
               New Experience Coming Soon!
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
