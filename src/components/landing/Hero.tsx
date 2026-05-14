@@ -85,8 +85,7 @@ export function Hero() {
         </h1>
 
         <p
-          className="mt-2 md:mt-4 box-border max-w-[672px] text-[15px] md:text-[18px] leading-[1.6] font-normal text-[#cfc2d6]"
-          style={{ fontFamily: 'Inter, ui-sans-serif' }}
+          className="mt-2 md:mt-4 box-border max-w-[672px] text-base md:text-[18px] leading-[1.6] font-normal text-[#cfc2d6] font-sans"
         >
           A structured environment for technical interview practice. Cognithic Pro builds confidence through advanced simulations and preparation tools.
         </p>
@@ -111,8 +110,7 @@ export function Hero() {
         </form>
 
         <p
-          className="mt-6 md:mt-8 font-mono text-[10px] md:text-[12px] font-medium leading-[1.4] text-[#988d9f] max-w-[320px] md:max-w-none"
-          style={{ letterSpacing: '0.6px' }}
+          className="mt-6 md:mt-8 font-sans text-[11px] md:text-[13px] font-medium leading-[1.4] text-[#988d9f] max-w-[320px] md:max-w-none"
         >
           Early access priority given to contributors and high-credit accounts.
         </p>
