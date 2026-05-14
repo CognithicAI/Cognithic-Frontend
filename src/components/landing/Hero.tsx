@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section
       id="ambitions"
-      className="relative z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden px-6 pt-[20px] md:pt-0"
+      className="relative z-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden px-6 pt-8 md:pt-0"
     >
       <div
         className="pointer-events-none absolute inset-0"
@@ -67,7 +67,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className="relative mx-auto flex w-full max-w-[896px] flex-col items-center text-center px-4"
+        className="relative mx-auto flex w-full max-w-[896px] flex-col items-center text-center px-4 -translate-y-6 md:translate-y-0"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 10 }}
