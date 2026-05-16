@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type ChangeEvent, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 export function Hero() {
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState<null | "success" | "error" | "invalid">(null);
   const fullText = "Level Up Your Tech Career.";
 
   useEffect(() => {
@@ -17,6 +19,42 @@ export function Hero() {
     }, 100);
     return () => clearInterval(interval);
   }, []);
+
+  const APPS_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+
+  const validateEmail = (value: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  };
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus(null);
+    if (!validateEmail(email)) {
+      setStatus("invalid");
+      return;
+    }
+    if (!APPS_SCRIPT_URL) {
+      setStatus("error");
+      return;
+    }
+    try {
+      setSubmitting(true);
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+        body: JSON.stringify({ email }),
+      });
+      setStatus("success");
+      setEmail("");
+    } catch (err) {
+      setStatus("error");
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   return (
     <section
@@ -108,23 +146,54 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 1, ease: "easeOut" }}
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleSubmit}
           className="mt-10 md:mt-16 box-border flex h-[56px] md:h-[64px] w-full max-w-[538px] items-center bg-[rgba(23,23,23,0.8)] border border-[#262626] rounded-[12px] md:rounded-[16px] p-[4px] md:p-[6px] shadow-[0_0_30px_rgba(183,109,255,0.15)] backdrop-blur-[10px]"
         >
           <Input
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
             placeholder="Engineering email..."
             className="h-full flex-1 border-0 bg-transparent px-3 md:px-6 text-[14px] md:text-[16px] text-[#e5e2e1] placeholder:text-white/20 focus-visible:ring-0"
           />
           <Button
             type="submit"
-            className="h-full px-4 md:px-8 rounded-[8px] md:rounded-[12px] bg-[#ddb7ff] text-[14px] md:text-[16px] font-bold text-[#490080] transition-all hover:bg-white"
+            disabled={submitting}
+            className="h-full px-4 md:px-8 rounded-[8px] md:rounded-[12px] bg-[#ddb7ff] text-[14px] md:text-[16px] font-bold text-[#490080] transition-all hover:bg-white disabled:opacity-60"
           >
-            Join Waitlist
+            {submitting ? "Joining..." : "Join Waitlist"}
           </Button>
         </motion.form>
+
+        {status === "invalid" && (
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mt-3 text-sm text-[#ffb3b3]"
+          >
+            Please enter a valid email address.
+          </motion.p>
+        )}
+
+        {status === "success" && (
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mt-3 text-sm text-[#bfecc4]"
+          >
+            Thanks - you're on the waitlist.
+          </motion.p>
+        )}
+
+        {status === "error" && (
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mt-3 text-sm text-[#ffb3b3]"
+          >
+            Something went wrong. Please try again later.
+          </motion.p>
+        )}
 
         <motion.p
           initial={{ opacity: 0 }}
